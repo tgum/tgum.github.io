@@ -1,0 +1,293 @@
+{
+	"caracters" : [ 
+		{
+		"name": "Aetra",
+		"son": "Thesee"
+		},
+		{
+		"name": "Agamemnon",
+		"son": "Oreste",
+		"daughter": "Electre",
+		"spouse": "Clytemnestre",
+		"brother": "Menelas"
+		},
+		{
+		"name": "Alcmene",
+		"son": "Heracles",
+		"spouse": "Amphitryon"
+		},
+		{
+		"name": "Amphitryon",
+		"son": "Iphicles",
+		"spouse": "Almene"
+		},
+		{
+		"name": "Anticlee",
+		"father": "Autolycos",
+		"son": "Ulysse",
+		"spouse": "Laerte",
+		"paternal grandfather": "Hermes",
+		"paternal grandmother": "Chione",
+		"grandson": "Telemaque"
+		},
+		{
+		"name": "Antigone",
+		"father": "Oedipe",
+		"mother": "Jocaste",
+		"brother": "Polynice"
+		},
+		{
+		"name": "Antiope",
+		"spouse": "Thesee"
+		},
+		{
+		"name": "Athene",
+		"king": "Egee"
+		},
+		{
+		"name": "Autolycos",
+		"father": "Hermes",
+		"mother": "Chione",
+		"daughter": "Anticlee",
+		"paternal grandfather": "Zeus",
+		"paternal grandmother": "Maia",
+		"grandson": "Ulysse"
+		},
+		{
+		"name": "Chione",
+		"son": "Autolycos",
+		"spouse": "Hermes"
+		},
+		{
+		"name": "Clytemnestre",
+		"son": "Oreste",
+		"daughter": "Electre",
+		"spouse": "Agamemnon"
+		},
+		{
+		"name": "Cronos",
+		"father": "Ouranos",
+		"mother": "Gaia",
+		"son": "Zeus",
+		"spouse": "Rhea",
+		"grandson": "Hermes",
+		"sister": "Rhea"
+		},
+		{
+		"name": "Egee",
+		"son": "Thesee"
+		},
+		{
+		"name": "Electre",
+		"father": "Agamemnon",
+		"mother": "Clytemnestre",
+		"brother": "Oreste"
+		},
+		{
+		"name": "Gaia",
+		"son": "Cronos",
+		"daughter": "Rhea",
+		"grandson": "Zeus"
+		},
+		{
+		"name": "Hector",
+		"father": "Priam",
+		"mother": "Hecube"
+		},
+		{
+		"name": "Hecube",
+		"son": "Hector",
+		"spouse": "Priam"
+		},
+		{
+		"name": "Helene",
+		"father": "Tyndare",
+		"spouse": "Menelas",
+		"cousin": "Penelope",
+		"uncle": "Icarios"
+		},
+		{
+		"name": "Heracles",
+		"father": "Zeus",
+		"mother": "Alcmene",
+		"spouse": "Megara",
+		"paternal grandfather": "Cronos",
+		"paternal grandmother": "Rhea",
+		"cousin": "Thesee",
+		"brother": "Iphicles"
+		},
+		{
+		"name": "Hermes",
+		"father": "Zeus",
+		"mother": "Maia",
+		"son": "Autolycos",
+		"spouse": "Chione",
+		"paternal grandfather": "Cronos",
+		"paternal grandmother": "Rhea"
+		},
+		{
+		"name": "Hypolyte",
+		"father": "Thesee",
+		"mother": "Antiope",
+		"paternal grandfather": "Egee",
+		"paternal grandmother": "Aetra"
+		},
+		{
+		"name": "Icarios",
+		"daughter": "Penelope",
+		"grandson": "Telemaque",
+		"brother": "Tyndare"
+		},
+		{
+		"name": "Iolaos",
+		"father": "Iphicles",
+		"paternal grandfather": "Amphitryon",
+		"paternal grandmother": "Alcmene"
+		},
+		{
+		"name": "Iphicles",
+		"mother": "Alcmene",
+		"brother": "Heracles"
+		},
+		{
+		"name": "Ithaque",
+		"king": "Ulysse"
+		},
+		{
+		"name": "Jocaste",
+		"son": "Oedipe",
+		"spouse": "Laios"
+		},
+		{
+		"name": "Laerte",
+		"son": "Ulysse",
+		"spouse": "Anticlee",
+		"grandson": "Telemaque"
+		},
+		{
+		"name": "Laios",
+		"son": "Oedipe",
+		"spouse": "Jocaste"
+		},
+		{
+		"name": "Maia",
+		"son": "Hermes",
+		"grandson": "Autolycos"
+		},
+		{
+		"name": "Megara",
+		"spouse": "Heracles"
+		},
+		{
+		"name": "Menelas",
+		"spouse": "Helene",
+		"brother": "Agamemnon"
+		},
+		{
+		"name": "Mycene",
+		"king": "Agamemnon"
+		},
+		{
+		"name": "Oedipe",
+		"father": "Laios",
+		"mother": "Jocaste",
+		"son": "Polynice",
+		"daughter": "Antigone",
+		"spouse": "Jocaste"
+		},
+		{
+		"name": "Oreste",
+		"father": "Agamemnon",
+		"mother": "Clytemnestre",
+		"sister": "Electre"
+		},
+		{
+		"name": "Ouranos",
+		"son": "Cronos",
+		"daughter": "Rhea",
+		"grandson": "Zeus"
+		},
+		{
+		"name": "Penelope",
+		"father": "Icarios",
+		"son": "Telemaque",
+		"spouse": "Ulysse",
+		"uncle": "Tyndare"
+		},
+		{
+		"name": "Polynice",
+		"father": "Oedipe",
+		"mother": "Jocaste",
+		"paternal grandfather": "Laios",
+		"paternal grandmother": "Jocaste",
+		"sister": "Antigone"
+		},
+		{
+		"name": "Priam",
+		"son": "Hector",
+		"spouse": "Hecube"
+		},
+		{
+		"name": "Rhea",
+		"father": "Ouranos",
+		"mother": "Gaia",
+		"son": "Zeus",
+		"spouse": "Cronos",
+		"grandson": "Hermes",
+		"brother": "Cronos"
+		},
+		{
+		"name": "Sparte",
+		"king": "Menelas"
+		},
+		{
+		"name": "Telemaque",
+		"father": "Ulysse",
+		"mother": "Penelope",
+		"paternal grandfather": "Laerte",
+		"paternal grandmother": "Anticlee",
+		"maternal grandfather": "Icarios",
+		"cousin": "Helene"
+		},
+		{
+		"name": "Thebes",
+		"king": "Oedipe"
+		},
+		{
+		"name": "Thesee",
+		"father": "Egee",
+		"mother": "Aetra",
+		"spouse": "Antiope",
+		"cousin": "Heracles"
+		},
+		{
+		"name": "Troie",
+		"king": "Priam"
+		},
+		{
+		"name": "Tyndare",
+		"niece": "Penelope",
+		"brother": "Icarios"
+		},
+		{
+		"name": "Ulysse",
+		"father": "Laerte",
+		"mother": "Anticlee",
+		"son": "Telemaque",
+		"spouse": "Penelope",
+		"maternal grandfather": "Autolycos"
+		},
+		{
+		"name": "Zeus",
+		"father": "Cronos",
+		"mother": "Rhea",
+		"son": "Hermes",
+		"spouse": "Hera",
+		"paternal grandfather": "Ouranos",
+		"paternal grandmother": "Gaia",
+		"maternal grandfather": "Ouranos",
+		"maternal grandmother": "Gaia",
+		"grandson": "Autolycos"
+		}
+	]
+}
