@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<title>Greek mythology quizz</title>
+		<title>A working quizz!!!</title>
 	</head>
 		
 	<body>
@@ -16,7 +16,7 @@
 			
 		<script>
 		const section = document.querySelector('section');
-		var requestURL= 'https://raw.githubusercontent.com/dlollia/dlollia.github.io/main/greek_myth_data.json';
+		var requestURL= 'http://192.168.1.62/quizz/greek_myth_data.json';
 		var request = new XMLHttpRequest();
 		var score = 0
 		var button = document.getElementById("click")
@@ -56,7 +56,7 @@
 					score ++
 					yesOrNo.textContent = "Bravo! Score: " +score
 				} else {
-					yesOrNo.textContent = "Try again!  It was " + answer + ". Score: " + score
+					yesOrNo.textContent = "Sorry. It was " + answer + ".   Score: " + score
 				}
 				randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 				caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
