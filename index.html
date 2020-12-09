@@ -3,7 +3,7 @@
 	
 	<head>
 		<meta charset="utf-8">
-		<title>A working quizz!!!</title>
+		<title>Greek mythology quizz</title>
 	</head>
 		
 	<body>
@@ -35,6 +35,7 @@
 			populateSection(caracters);
 		}
 		function populateSection(jsonObj) {
+			var questions = 0
 			var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
 			var randomRelation = caracter[randomNumFunc(caracter.length)];
@@ -51,12 +52,13 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
+				questions ++
 				var txtBox = document.getElementById("textInput").value;
 				if(txtBox === answer) {
 					score ++
-					yesOrNo.textContent = "Bravo! Score: " +score
+					yesOrNo.innerHTML = "Bravo! <br> Your score is : " + score + "/" + questions
 				} else {
-					yesOrNo.textContent = "Sorry. It was " + answer + ".   Score: " + score
+					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is : " + score + "/" + questions
 				}
 				randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 				caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
