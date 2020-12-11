@@ -1,6 +1,6 @@
 <title>Markdown guide</title>
 
-# Markdown
+# Markdown guide
 
 ### simple text
 ```
