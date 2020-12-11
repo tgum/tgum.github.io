@@ -1,6 +1,4 @@
 <title>Greek mythology quizz</title>
-<a href=".."><img src="images/home-img.svg"></a>
-
 # Greek mythology quizz
 
 <section>
