@@ -1,7 +1,5 @@
-<title>markdown guide</title>
-<a href=".."><img src="images/home-img.svg"></a>
-
-# markdown
+<title>Markdown guide</title>
+# Markdown
 
 ### simple text
 ```
@@ -154,23 +152,23 @@ you <em>can</em> <strong>also</strong> add HTML in markdown
 		the language, enter the code and put three backsticks at the end
 	```
 	
-	[to make a link put the name of the link in curly brackets     
-	and then put the URL in parentese](https://like.that)
+	[To make a link put the name of the link in curly brackets     
+	and then put the URL in parentheses.](https://like.that)
 	
 	- to
 	- make an
-	- unorded list
+	- unordered list
 	- use - at the
 	- start of each item
 	1. for ordered
 	1. lists use
 	1. 1.
 	
-	~~to make strikethoughs put ~~ around your text~~
+	~~To make strikethoughs put ~~ around your text.~~
 
-	![to put images in markdown is verry similar to links exept that     
-	you pt a ! at the begging and instead of a wesite URL you indicate    
+	![To put images in Markdown is very similar to links except that     
+	you put a ! at the beginning and instead of a website URL you indicate    
 	the path to the image](/image/myImage.jpg)
 
-	and finaly <em>you</em> can emdedd <strong>HTML</strong> in markdown
+	and finaly <em>you</em> can embedd <strong>HTML</strong> in Markdown.
 ```
