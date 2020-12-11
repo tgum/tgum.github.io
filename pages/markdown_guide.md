@@ -3,19 +3,20 @@
 # Markdown guide
 
 ### simple text
-```
+```markdown
 	this is some text
 ```
 
-result:     
+result:
+
 this is some text
 
 ### bold text
 
- ```markdown
+```markdown
 	**this is bold text**
 	__you can also use undescores__
- ```
+```
 
 result:
 
