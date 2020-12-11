@@ -7,6 +7,7 @@
 	</head>
 		
 	<body>
+			<a href=".."><img src="images/home-img.svg"></a>
 			<section>
 			</section>
 			<input id="textInput" type="text">
@@ -16,7 +17,7 @@
 			
 		<script>
 		const section = document.querySelector('section');
-		var requestURL= 'https://raw.githubusercontent.com/dlollia/dlollia.github.io/main/greek_myth_data.json';
+		var requestURL= 'https://raw.githubusercontent.com/dlollia/dlollia.github.io/complete-website/my_website/pages/greek_myth_data.json';
 		var request = new XMLHttpRequest();
 		var score = 0
 		var button = document.getElementById("click")
@@ -46,7 +47,7 @@
 					
 				}
 			}
-			
+
 			var answer = jsonObj['caracters'][randomCaracter][randomRelation];
 			var myPara = document.createElement('p');
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
@@ -56,10 +57,12 @@
 				var txtBox = document.getElementById("textInput").value;
 				if(txtBox === answer) {
 					score ++
-					yesOrNo.innerHTML = "Bravo! <br> Your score is : " + score + "/" + questions
+					yesOrNo.innerHTML = "Bravo! <br> Your score is: " + score + "/" + questions
 				} else {
-					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is : " + score + "/" + questions
+					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is: " + score + "/" + questions
 				}
+				document.getElementById("textInput").value = ''
+
 				randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 				caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
 				randomRelation = caracter[randomNumFunc(caracter.length)];
@@ -78,6 +81,13 @@
 				section.replaceChild(myPara, oldPara);
 				console.log(answer)
 			}
+			input = document.getElementById("textInput")
+			input.addEventListener("keyup", function(event) {
+				if (event.keyCode === 13) {
+ 				  event.preventDefault();
+  			 document.getElementById("click").click();
+ 				 }
+			});
 			button.addEventListener("click", myFunc);
 		}
 	</script>
