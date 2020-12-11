@@ -1,5 +1,5 @@
 <title>Greek mythology quizz</title>
-# Greek mythology quizz
+## Greek mythology quizz
 
 <section>
 </section>
