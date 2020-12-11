@@ -16,6 +16,7 @@ this is some text
 	**this is bold text**
 	__you can also use undescores__
  ```
+
 result:
 
 **this is bold text**     
@@ -43,6 +44,7 @@ _you can also use underscores like for bold text_
 ```
 
 result:
+
 # this is a top level header
 ## this is a second level header
 ...
@@ -57,6 +59,7 @@ result:
 ```
 
 result:
+
 ```markdown
 	this is in a code block
 ```
@@ -123,7 +126,8 @@ result:
 	![a squirrel picture](images/squirrel.jpg)
 ```
 
-result:     
+result:
+
 ![a squirrel picture](images/squirrel.jpg)
 
 ### HTML
@@ -132,7 +136,8 @@ result:
 	you <em>can</em> <strong>also</strong> add HTML in markdown
 ```
 
-result:      
+result:
+
 you <em>can</em> <strong>also</strong> add HTML in markdown
 
 ## summary
