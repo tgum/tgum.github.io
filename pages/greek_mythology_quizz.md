@@ -5,8 +5,8 @@
 
 <section>
 </section>
-<input id="textInput" type="text">
-<button id="click" type="submit">submit</button>
+<input type="text" id="textInput">
+<button type="submit" id="click">submit</button>
 	
 <p id="yesNo"></p>
 		
@@ -14,17 +14,17 @@
 		const section = document.querySelector('section');
 		var requestURL= 'greek_myth_data.json';
 		var request = new XMLHttpRequest();
-		var score = 0
-		var button = document.getElementById("click")
-		var yesOrNo = document.getElementById("yesNo")
-		var numberOfQues = 20
+		var score = 0;
+		var button = document.getElementById("click");
+		var yesOrNo = document.getElementById("yesNo");
+		var numberOfQues = 20;
 		
 		request.open('GET', requestURL);
 		request.responseType = 'json';
 		request.send();
 		
 		function randomNumFunc(maxi) {
-			return Math.floor(Math.random() * maxi)
+			return Math.floor(Math.random() * maxi);
 		}
 		
 		request.onload = function() {
@@ -32,7 +32,7 @@
 			populateSection(caracters);
 		}
 		function populateSection(jsonObj) {
-			var questions = 0
+			var questions = 0;
 			var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
 			var randomRelation = caracter[randomNumFunc(caracter.length)];
@@ -52,18 +52,18 @@
 				questions ++
 				var txtBox = document.getElementById("textInput").value;
 				if(txtBox === answer && questions < numberOfQues) {
-					score ++
-					yesOrNo.innerHTML = "Bravo! <br> Your score is: " + score + "/" + questions
+					score ++;
+					yesOrNo.innerHTML = "Bravo! <br> Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is: " + score + "/" + questions
+					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
-					yesOrNo.innerHTML = ""
+					yesOrNo.innerHTML = "";
 				}
-				document.getElementById("textInput").value = ''
+				document.getElementById("textInput").value = '';
 
 				if(questions < numberOfQues){
 					randomCaracter = randomNumFunc(jsonObj['caracters'].length);
-					caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
+					caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter]);
 					randomRelation = caracter[randomNumFunc(caracter.length)];
 					if(randomRelation === "name") {
 						while(randomRelation === "name") {
@@ -73,18 +73,18 @@
 					}
 					answer = jsonObj['caracters'][randomCaracter][randomRelation];
 				
-					oldPara = document.querySelector('p')
+					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
 					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 					section.replaceChild(myPara, oldPara);
 				} else {
-					oldPara = document.querySelector('p')
+					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
-					myPara.textContent = "You finished! You did " + score + " on " + numberOfQues
+					myPara.textContent = "You finished! You did " + score + " on " + numberOfQues;
 				}
 				section.replaceChild(myPara, oldPara);
 				}
-				input = document.getElementById("textInput")
+				input = document.getElementById("textInput");
 				input.addEventListener("keyup", function(event) {
 				if (event.keyCode === 13) {
  				  event.preventDefault();
