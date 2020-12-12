@@ -19,7 +19,10 @@
 		var score = 0;
 		var button = document.getElementById("click");
 		var yesOrNo = document.getElementById("yesNo");
+		// makes variables that are used by the wikipedia section
 		var link = document.getElementById('wikipedia_link');
+		var image = document.getElementById("image")
+		var wikipediaPara = document.getElementById("para")
 		var numberOfQues = 20;
 
 		request.open('GET', requestURL);
@@ -71,9 +74,9 @@
 							to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
 									var extract = request.response;
-									document.getElementById("para").textContent = extract.extract;
+									wikipediaPara.textContent = extract.extract;
 									// changes the image to the first image on the wikipedia page
-									document.getElementById("image").src = extract.thumbnail.source;
+									image.src = extract.thumbnail.source;
 	  					}
   				}
 				// calls the function we just created
@@ -87,14 +90,15 @@
 					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
-					// clear the image at the end
-					document.getElementById("image").src = "";
-					// clear the paragraph
-					document.getElementById("para").textContent = "";
-					// set the link to nothing
+					// clears the image
+					image.src = "";
+					// clears the paragraph
+					wikipediaPara.textContent = "";
+					// sets the link to nothing
 					link.textContent = ""
 				}
 				document.getElementById("textInput").value = '';
+				document.getElementById("textInput").focus();
 
 				if(questions < numberOfQues){
 					randomCaracter = randomNumFunc(jsonObj['caracters'].length);
