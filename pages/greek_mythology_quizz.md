@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+		<head>
+			<meta charset="utf-8">
 <title>Greek mythology quizz</title>
-## Greek mythology quizz
+</head>
+<body>
+<h2>Greek mythology quizz</>
 
 <section>
 </section>
@@ -134,3 +140,5 @@
 			button.addEventListener("click", myFunc);
 		}
 	</script>
+</body>
+</html>
