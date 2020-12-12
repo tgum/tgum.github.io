@@ -1,0 +1,33 @@
+{
+	"caracters" : [
+		{
+			"name": ["ulysses"],
+			"spouse": ["penelope"],
+			"son": ["telemachus", "telegonus"],
+			"father": ["laertes"],
+			"mother": ["anticlea"]
+		},
+		{
+			"name": ["penelope"],
+			"spouse": ["ulysses", "odysseus"],
+			"son": ["telemachus", "telegonus"],
+			"father": ["icarios"]
+		},
+		{
+			"name": ["telemachus"],
+			"father": ["ulysses", "odysseus"],
+			"mother": ["penelope"],
+			"brother": ["telegonus"],
+			"grandmother": ["anticlea"],
+			"grandfather": ["laertes"]
+		},
+		{
+			"name": ["telegonus"],
+			"father": ["ulysses", "odysseus"],
+			"mother": ["circe"],
+			"brother": ["telemachus"],
+			"grandmother": ["anticlea"],
+			"grandfather": ["laertes", "helios"]
+		}
+	]
+}

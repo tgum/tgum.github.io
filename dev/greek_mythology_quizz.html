@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+
+<title>Greek mythology quizz</title>
+<body>
+
+<section>
+</section>
+<input type="text" id="textInput">
+<button type="submit" id="click">submit</button>
+
+<p id="yesNo"></p>
+
+<img src="" id="image" height="200">
+<p id="para"></p>
+<a href="" id="wikipedia_link"></a>
+
+<script>
+		const section = document.querySelector('section');
+		var requestURL = 'greek_myth_data.json';
+		var request = new XMLHttpRequest();
+		var score = 0;
+		var button = document.getElementById("click");
+		var yesOrNo = document.getElementById("yesNo");
+		// makes variables that are used by the wikipedia section
+		var link = document.getElementById('wikipedia_link');
+		var image = document.getElementById("image")
+		var wikipediaPara = document.getElementById("para")
+		var numberOfQues = 20;
+
+		request.open('GET', requestURL);
+		request.responseType = 'json';
+		request.send();
+
+		function randomNumFunc(maxi) {
+			return Math.floor(Math.random() * maxi);
+		}
+
+		request.onload = function() {
+			var caracters = request.response;
+			populateSection(caracters);
+		}
+		function populateSection(jsonObj) {
+			var questions = 0;
+			var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
+			var randomRelation = caracter[randomNumFunc(caracter.length)];
+
+			if(randomRelation === "name") {
+				while(randomRelation === "name") {
+					var randomRelation = caracter[randomNumFunc(caracter.length)];
+
+				}
+			}
+
+			var answer = jsonObj['caracters'][randomCaracter][randomRelation];
+			var myPara = document.createElement('p');
+			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+			section.appendChild(myPara);
+			function myFunc() {
+				//console.log(randomRelation)
+				// creates a function to get the summary of the wikipedia page corresponding to the answer.
+				/*function wikipedia() {
+							// defines a variable for refering to the URL of the JSON file of the wikipedia page.
+    					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer;
+							// makes a new XMLHttpRequest
+    					var request = new XMLHttpRequest();
+    					request.open("GET", requestURL);
+							// says that the response type we want is JSON
+    					request.responseType = "json";
+							// sends the request
+    					request.send();
+							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
+							var link = document.getElementById('wikipedia_link');
+							link.textContent = "Learn more about " + answer + " on wikipedia";
+							link.href = "https://en.wikipedia.org/wiki/" + answer;
+							 then the response is recieved change the content of the element with the id "para"
+							to the extract of the wikipedia page coresponding to the answer
+    					request.onload = function() {
+									var extract = request.response;
+									wikipediaPara.textContent = extract.extract;
+									// changes the image to the first image on the wikipedia page
+									image.src = extract.thumbnail.source;
+	  					}
+  				}
+			// calls the function we just created
+			wikipedia()*/
+			questions ++
+			var txtBox = document.getElementById("textInput").value;
+			if(answer.includes(txtBox.toLowerCase())) {
+					score ++;
+					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
+				} else if(questions < numberOfQues) {
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
+				} else {
+					yesOrNo.innerHTML = "";
+					// clears the image
+					image.src = "";
+					// clears the paragraph
+					wikipediaPara.textContent = "";
+					// sets the link to nothing
+					link.textContent = ""
+				}
+				document.getElementById("textInput").value = '';
+				document.getElementById("textInput").focus();
+
+				if(questions < numberOfQues){
+					randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+					caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter]);
+					randomRelation = caracter[randomNumFunc(caracter.length)];
+					if(randomRelation === "name") {
+						while(randomRelation === "name") {
+							var randomRelation = caracter[randomNumFunc(caracter.length)];
+						}
+					}
+
+					answer = jsonObj['caracters'][randomCaracter][randomRelation];
+
+					oldPara = document.querySelector('p');
+					var myPara = document.createElement('p');
+					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+				}
+				else {
+					oldPara = document.querySelector('p');
+					var myPara = document.createElement('p');
+					myPara.textContent = "You finished! You did " + score + " on " + numberOfQues;
+				}
+				section.replaceChild(myPara, oldPara);
+				}
+				input = document.getElementById("textInput");
+				input.addEventListener("keyup", function(event) {
+					if (event.keyCode === 13) {
+ 						event.preventDefault();
+  					document.getElementById("click").click();
+ 					}
+				});
+			button.addEventListener("click", myFunc);
+		}
+	</script>
+	<title>Greek mythology quizz</title>
+
+	## Greek mythology quizz
+
+	<section>
+	</section>
+	<input type="text" id="textInput">
+	<button type="submit" id="click">submit</button>
+
+	<p id="yesNo"></p>
+
+	<img src="" id="image" height="200">
+	<p id="para"></p>
+	<a href="" id="wikipedia_link"></a>
+
+	<script>
+			const section = document.querySelector('section');
+			var requestURL = 'greek_myth_data.json';
+			var request = new XMLHttpRequest();
+			var score = 0;
+			var button = document.getElementById("click");
+			var yesOrNo = document.getElementById("yesNo");
+			// makes variables that are used by the wikipedia section
+			var link = document.getElementById('wikipedia_link');
+			var image = document.getElementById("image")
+			var wikipediaPara = document.getElementById("para")
+			var numberOfQues = 20;
+
+			request.open('GET', requestURL);
+			request.responseType = 'json';
+			request.send();
+
+			function randomNumFunc(maxi) {
+				return Math.floor(Math.random() * maxi);
+			}
+
+			request.onload = function() {
+				var caracters = request.response;
+				populateSection(caracters);
+			}
+			function populateSection(jsonObj) {
+				var questions = 0;
+				var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+				caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
+				var randomRelation = caracter[randomNumFunc(caracter.length)];
+
+				if(randomRelation === "name") {
+					while(randomRelation === "name") {
+						var randomRelation = caracter[randomNumFunc(caracter.length)];
+
+					}
+				}
+
+				var answer = jsonObj['caracters'][randomCaracter][randomRelation];
+				var myPara = document.createElement('p');
+				myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+				section.appendChild(myPara);
+				function myFunc() {
+					//console.log(randomRelation)
+					// creates a function to get the summary of the wikipedia page corresponding to the answer.
+					/*function wikipedia() {
+								// defines a variable for refering to the URL of the JSON file of the wikipedia page.
+	    					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer;
+								// makes a new XMLHttpRequest
+	    					var request = new XMLHttpRequest();
+	    					request.open("GET", requestURL);
+								// says that the response type we want is JSON
+	    					request.responseType = "json";
+								// sends the request
+	    					request.send();
+								// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
+								var link = document.getElementById('wikipedia_link');
+								link.textContent = "Learn more about " + answer + " on wikipedia";
+								link.href = "https://en.wikipedia.org/wiki/" + answer;
+								 then the response is recieved change the content of the element with the id "para"
+								to the extract of the wikipedia page coresponding to the answer
+	    					request.onload = function() {
+										var extract = request.response;
+										wikipediaPara.textContent = extract.extract;
+										// changes the image to the first image on the wikipedia page
+										image.src = extract.thumbnail.source;
+		  					}
+	  				}
+				// calls the function we just created
+				wikipedia()*/
+				questions ++
+				var txtBox = document.getElementById("textInput").value;
+				if(answer.includes(txtBox.toLowerCase())) {
+						score ++;
+						yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
+					} else if(questions < numberOfQues) {
+						yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
+					} else {
+						yesOrNo.innerHTML = "";
+						// clears the image
+						image.src = "";
+						// clears the paragraph
+						wikipediaPara.textContent = "";
+						// sets the link to nothing
+						link.textContent = ""
+					}
+					document.getElementById("textInput").value = '';
+					document.getElementById("textInput").focus();
+
+					if(questions < numberOfQues){
+						randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+						caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter]);
+						randomRelation = caracter[randomNumFunc(caracter.length)];
+						if(randomRelation === "name") {
+							while(randomRelation === "name") {
+								var randomRelation = caracter[randomNumFunc(caracter.length)];
+							}
+						}
+
+						answer = jsonObj['caracters'][randomCaracter][randomRelation];
+
+						oldPara = document.querySelector('p');
+						var myPara = document.createElement('p');
+						myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+					}
+					else {
+						oldPara = document.querySelector('p');
+						var myPara = document.createElement('p');
+						myPara.textContent = "You finished! You did " + score + " on " + numberOfQues;
+					}
+					section.replaceChild(myPara, oldPara);
+					}
+					input = document.getElementById("textInput");
+					input.addEventListener("keyup", function(event) {
+						if (event.keyCode === 13) {
+	 						event.preventDefault();
+	  					document.getElementById("click").click();
+	 					}
+					});
+				button.addEventListener("click", myFunc);
+			}
+		</script>
+</body>
+</html>
