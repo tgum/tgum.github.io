@@ -49,20 +49,25 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
-				
+				// creates a function to get the summary of the wikipedia page corresponding to the answer.
 				function wikipedia() {
+					// defines a variable for refering to the URL of the JSON file of the wikipedia page.
     					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer;
+					// makes a new XMLHttpRequest
     					var request = new XMLHttpRequest();
-
     					request.open("GET", requestURL);
+					// says that the response type we want is JSON
     					request.responseType = "json";
+					// sends the request
     					request.send();
+					/* then the response is recieved change the content of the element with the id "para"
+					to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
 						var extract = request.response;
-						console.log(extract)
 						document.getElementById("para").textContent = extract.extract;
 	  				}
   				}
+				// calls the function we just created
 				wikipedia()
 				questions ++
 				var txtBox = document.getElementById("textInput").value;
