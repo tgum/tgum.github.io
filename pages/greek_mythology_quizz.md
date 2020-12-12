@@ -55,6 +55,7 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
+				console.log(randomRelation)
 				// creates a function to get the summary of the wikipedia page corresponding to the answer.
 				function wikipedia() {
 							// defines a variable for refering to the URL of the JSON file of the wikipedia page.
@@ -79,11 +80,11 @@
 									image.src = extract.thumbnail.source;
 	  					}
   				}
-				// calls the function we just created
-				wikipedia()
-				questions ++
-				var txtBox = document.getElementById("textInput").value;
-				if(txtBox === answer && questions < numberOfQues) {
+			// calls the function we just created
+			wikipedia()
+			questions ++
+			var txtBox = document.getElementById("textInput").value;
+			if(txtBox === answer && questions < numberOfQues) {
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
