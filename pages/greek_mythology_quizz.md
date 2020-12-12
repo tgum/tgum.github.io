@@ -9,7 +9,7 @@
 <p id="yesNo"></p>
 
 <p id="para"></p>
-<a href="" id="wikipedia_link">learn more on wikipedia</a>
+<a href="" id="wikipedia_link"></a>
 
 <script>
 		const section = document.querySelector('section');
@@ -61,8 +61,10 @@
     					request.responseType = "json";
 							// sends the request
     					request.send();
-							// changes the href of the link with the id wikipedia_link to a link about the caracter
-							document.getElementById('wikipedia_link').href = "https://en.wikipedia/wiki/" + answer
+							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
+							var link = document.getElementById('wikipedia_link');
+							link.textContent = "Learn more on wikipedia"
+							link.href = "https://en.wikipedia.org/wiki/" + answer;
 							/* then the response is recieved change the content of the element with the id "para"
 							to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
@@ -81,7 +83,9 @@
 					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
-					document.getElementById("para").textContent = ""
+					document.getElementById("para").textContent = "";
+					// set the link to nothing
+					link.textContent = ""
 				}
 				document.getElementById("textInput").value = '';
 
