@@ -47,6 +47,7 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
+				/*
 				function wikipedia() {
     					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer;
     					var request = new XMLHttpRequest();
@@ -59,7 +60,7 @@
 						document.getElementById("para").textContent = extract.extract;
 	  				}
   				}
-				wikipedia()
+				wikipedia()*/
 				questions ++
 				var txtBox = document.getElementById("textInput").value;
 				if(txtBox === answer && questions < numberOfQues) {
