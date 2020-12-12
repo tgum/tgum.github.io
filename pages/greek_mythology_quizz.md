@@ -78,6 +78,7 @@
 					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
+					document.getElementById("para").textContent = ""
 				}
 				document.getElementById("textInput").value = '';
 
@@ -96,7 +97,6 @@
 					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
 					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
-					// section.replaceChild(myPara, oldPara);
 				}
 				else {
 					oldPara = document.querySelector('p');
