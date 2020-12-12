@@ -75,7 +75,7 @@
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "It was " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 				}
