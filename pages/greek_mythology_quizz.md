@@ -8,7 +8,7 @@
 
 <p id="yesNo"></p>
 
-<img src="" id="image">
+<img src="" id="image" height="200">
 <p id="para"></p>
 <a href="" id="wikipedia_link"></a>
 
@@ -87,6 +87,9 @@
 					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
+					// clear the image at the end
+					document.getElementById("image").src = "";
+					// clear the paragraph
 					document.getElementById("para").textContent = "";
 					// set the link to nothing
 					link.textContent = ""
