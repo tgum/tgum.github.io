@@ -9,6 +9,7 @@
 <p id="yesNo"></p>
 
 <p id="para"></p>
+<a href="" id="wikipedia_link">learn more on wikipedia</a>
 
 <script>
 		const section = document.querySelector('section');
@@ -51,21 +52,23 @@
 			function myFunc() {
 				// creates a function to get the summary of the wikipedia page corresponding to the answer.
 				function wikipedia() {
-					// defines a variable for refering to the URL of the JSON file of the wikipedia page.
+							// defines a variable for refering to the URL of the JSON file of the wikipedia page.
     					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer;
-					// makes a new XMLHttpRequest
+							// makes a new XMLHttpRequest
     					var request = new XMLHttpRequest();
     					request.open("GET", requestURL);
-					// says that the response type we want is JSON
+							// says that the response type we want is JSON
     					request.responseType = "json";
-					// sends the request
+							// sends the request
     					request.send();
-					/* then the response is recieved change the content of the element with the id "para"
-					to the extract of the wikipedia page coresponding to the answer */
+							// changes the href of the link with the id wikipedia_link to a link about the caracter
+							document.getElementById('wikipedia_link').href = "https://en.wikipedia/wiki/" + answer
+							/* then the response is recieved change the content of the element with the id "para"
+							to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
-						var extract = request.response;
-						document.getElementById("para").textContent = extract.extract;
-	  				}
+									var extract = request.response;
+									document.getElementById("para").textContent = extract.extract;
+	  					}
   				}
 				// calls the function we just created
 				wikipedia()
