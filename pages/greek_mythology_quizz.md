@@ -19,6 +19,7 @@
 		var score = 0;
 		var button = document.getElementById("click");
 		var yesOrNo = document.getElementById("yesNo");
+		var link = document.getElementById('wikipedia_link');
 		var numberOfQues = 20;
 
 		request.open('GET', requestURL);
