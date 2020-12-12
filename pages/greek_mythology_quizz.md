@@ -8,6 +8,8 @@
 
 <p id="yesNo"></p>
 
+<p id="para"></p>
+
 <script>
 		const section = document.querySelector('section');
 		var requestURL = 'greek_myth_data.json';
