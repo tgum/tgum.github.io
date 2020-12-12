@@ -8,6 +8,7 @@
 
 <p id="yesNo"></p>
 
+<img src="" id="image">
 <p id="para"></p>
 <a href="" id="wikipedia_link"></a>
 
@@ -63,13 +64,15 @@
     					request.send();
 							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
 							var link = document.getElementById('wikipedia_link');
-							link.textContent = "Learn more on wikipedia"
+							link.textContent = "Learn more about " + answer + " on wikipedia";
 							link.href = "https://en.wikipedia.org/wiki/" + answer;
 							/* then the response is recieved change the content of the element with the id "para"
 							to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
 									var extract = request.response;
 									document.getElementById("para").textContent = extract.extract;
+									// changes the image to the first image on the wikipedia page
+									document.getElementById("image").src = extract.thumbnail.source;
 	  					}
   				}
 				// calls the function we just created
