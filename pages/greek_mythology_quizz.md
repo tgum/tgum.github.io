@@ -57,6 +57,7 @@
     					request.send();
     					request.onload = function() {
 						var extract = request.response;
+						console.log(extract)
 						document.getElementById("para").textContent = extract.extract;
 	  				}
   				}
