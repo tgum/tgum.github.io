@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-
-<title>Greek mythology quizz</title>
+		<title>Greek mythology quizz</title>
+	</head>
 <body>
+<h2>greek mythology quizz</h2>
 
 <section>
 </section>
@@ -19,7 +20,7 @@
 
 <script>
 		const section = document.querySelector('section');
-		var requestURL = 'tgum.github.io/dev/greek_myth_data.json';
+		var requestURL = 'greek_myth_data.json';
 		var request = new XMLHttpRequest();
 		var score = 0;
 		var button = document.getElementById("click");
@@ -40,6 +41,7 @@
 
 		request.onload = function() {
 			var caracters = request.response;
+			console.log("did it work?");
 			populateSection(caracters);
 		}
 		function populateSection(jsonObj) {
@@ -75,8 +77,8 @@
 							var link = document.getElementById('wikipedia_link');
 							link.textContent = "Learn more about " + answer[0] + " on wikipedia";
 							link.href = "https://en.wikipedia.org/wiki/" + answer[0];
-							 then the response is recieved change the content of the element with the id "para"
-							to the extract of the wikipedia page coresponding to the answer
+							/* then the response is recieved change the content of the element with the id "para"
+							to the extract of the wikipedia page coresponding to the answer */
     					request.onload = function() {
 									var extract = request.response;
 									wikipediaPara.textContent = extract.extract;
@@ -140,5 +142,6 @@
 				});
 			button.addEventListener("click", myFunc);
 		}
+		</script>
 </body>
 </html>
