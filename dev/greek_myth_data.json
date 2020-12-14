@@ -9,13 +9,13 @@
 		},
 		{
 			"name": ["Penelope"],
-			"spouse": ["Ulysses", "Odysseus"],
+			"spouse": ["Odysseus", "Ulysses"],
 			"son": ["Telemachus", "Telegonus"],
 			"father": ["Icarios"]
 		},
 		{
 			"name": ["Telemachus"],
-			"father": ["Ulysses", "Odysseus"],
+			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Penelope"],
 			"brother": ["Telegonus"],
 			"grandmother": ["Anticlea"],
@@ -23,7 +23,7 @@
 		},
 		{
 			"name": ["Telegonus"],
-			"father": ["Ulysses", "Odysseus"],
+			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Circe"],
 			"brother": ["Telemachus"],
 			"grandmother": ["Anticlea"],
