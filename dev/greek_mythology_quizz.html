@@ -90,14 +90,14 @@
 			wikipedia()
 			questions ++
 			var txtBox = document.getElementById("textInput").value;
-			// makes the answer case insensitive by stringifying the answer array then putting it to lower case and then
+			// makes the answer case insensitive by turning the answer array to a string then putting it to lower case and then
 			// putting it back to an array so the if function can read it
 			var caseInsensitiveAnswer = answer.toString().toLowerCase().split(',');
 			if(caseInsensitiveAnswer.includes(txtBox.toLowerCase())) {
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
