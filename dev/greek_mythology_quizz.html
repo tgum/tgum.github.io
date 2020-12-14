@@ -25,7 +25,7 @@
 		var score = 0;
 		var button = document.getElementById("click");
 		var yesOrNo = document.getElementById("yesNo");
-		// makes variables that are used by the wikipedia section
+		// makes variables that are used by the Wikipedia section
 		var link = document.getElementById('wikipedia_link');
 		var image = document.getElementById("image")
 		var wikipediaPara = document.getElementById("para")
@@ -62,9 +62,9 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
-				// creates a function to get the summary of the wikipedia page corresponding to the answer.
+				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
 				function wikipedia() {
-							// defines a variable for refering to the URL of the JSON file of the wikipedia page.
+							// defines a variable for refering to the URL of the JSON file of the Wikipedia page.
     					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer[0];
 							// makes a new XMLHttpRequest
     					var request = new XMLHttpRequest();
@@ -73,16 +73,16 @@
     					request.responseType = "json";
 							// sends the request
     					request.send();
-							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
+							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on Wikipedia"
 							var link = document.getElementById('wikipedia_link');
-							link.textContent = "Learn more about " + answer[0] + " on wikipedia";
+							link.textContent = "Learn more about " + answer[0] + " on Wikipedia";
 							link.href = "https://en.wikipedia.org/wiki/" + answer[0];
 							/* then the response is recieved change the content of the element with the id "para"
-							to the extract of the wikipedia page coresponding to the answer */
+							to the extract of the Wikipedia page coresponding to the answer */
     					request.onload = function() {
 									var extract = request.response;
 									wikipediaPara.textContent = extract.extract;
-									// changes the image to the first image on the wikipedia page
+									// changes the image to the first image on the Wikipedia page
 									image.src = extract.thumbnail.source;
 	  					}
   				}
