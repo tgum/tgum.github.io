@@ -20,8 +20,7 @@
 
 <script>
 		const section = document.querySelector('section');
-		var requestURL = 'greek_myth_data.json';
-		var request = new XMLHttpRequest();
+		var dataURL = 'greek_myth_data.json';
 		var score = 0;
 		var button = document.getElementById("click");
 		var yesOrNo = document.getElementById("yesNo");
@@ -31,28 +30,26 @@
 		var wikipediaPara = document.getElementById("para")
 		var numberOfQues = 20;
 
-		request.open('GET', requestURL);
-		request.responseType = 'json';
-		request.send();
-
 		function randomNumFunc(maxi) {
 			return Math.floor(Math.random() * maxi);
 		}
 
-		request.onload = function() {
-			var caracters = request.response;
-			console.log("did it work?");
+		async function startAll() {
+			let response = await fetch(dataURL);
+			let caracters = await response.json();
 			populateSection(caracters);
 		}
+		startAll();
+
 		function populateSection(jsonObj) {
 			var questions = 0;
-			var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+			var randomCaracter = randomNumFunc(jsonObj.caracters.length);
 			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
-			var randomRelation = caracter[randomNumFunc(caracter.length)];
+			let randomRelation = caracter[randomNumFunc(caracter.length)];
 
 			if(randomRelation === "name") {
 				while(randomRelation === "name") {
-					var randomRelation = caracter[randomNumFunc(caracter.length)];
+					randomRelation = caracter[randomNumFunc(caracter.length)];
 
 				}
 			}
@@ -63,31 +60,25 @@
 			section.appendChild(myPara);
 			function myFunc() {
 				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
-				function wikipedia() {
-							// defines a variable for refering to the URL of the JSON file of the Wikipedia page.
-    					var requestURL = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer[0];
-							// makes a new XMLHttpRequest
-    					var request = new XMLHttpRequest();
-    					request.open("GET", requestURL);
-							// says that the response type we want is JSON
-    					request.responseType = "json";
-							// sends the request
-    					request.send();
-							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on Wikipedia"
-							var link = document.getElementById('wikipedia_link');
-							link.textContent = "Learn more about " + answer[0] + " on Wikipedia";
-							link.href = "https://en.wikipedia.org/wiki/" + answer[0];
-							/* then the response is recieved change the content of the element with the id "para"
-							to the extract of the Wikipedia page coresponding to the answer */
-    					request.onload = function() {
-									var extract = request.response;
-									wikipediaPara.textContent = extract.extract;
-									// changes the image to the first image on the Wikipedia page
-									image.src = extract.thumbnail.source;
-	  					}
+				async function wikipedia() {
+					// changes the url of element with the id "wikipedia_link" to a link to the Wikipedia page
+					link.href = "https://en.wikipedia.org/wiki/" + answer[0];
+					link.textContent = "learn more about " + answer[0] + " on Wikipedia";
+					// defines a variable for refering to the URL of the JSON file of the Wikipedia page.
+    			let url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + answer[0];
+					let response = await fetch(url);
+					let json = await response.json();
+					// changes the paragraph with the id "para" to the first paragraph on the Wikipedia page
+					wikipediaPara.innerHTML = json.extract_html;
+					// changes the <img> to the first image from the Wikipedia page
+					image.src = json.thumbnail.source;
   				}
 			// calls the function we just created
 			wikipedia()
+				.catch(error => {
+					console.log("error")
+					console.error(error)
+				});
 			questions ++
 			var txtBox = document.getElementById("textInput").value;
 			// makes the answer case insensitive by turning the answer array to a string then putting it to lower case and then
@@ -111,7 +102,7 @@
 				document.getElementById("textInput").focus();
 
 				if(questions < numberOfQues){
-					randomCaracter = randomNumFunc(jsonObj['caracters'].length);
+					randomCaracter = randomNumFunc(jsonObj.caracters.length);
 					caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter]);
 					randomRelation = caracter[randomNumFunc(caracter.length)];
 					if(randomRelation === "name") {
@@ -142,6 +133,7 @@
 				});
 			button.addEventListener("click", myFunc);
 		}
+
 		</script>
 </body>
 </html>
