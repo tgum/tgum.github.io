@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 		<head>
 			<meta charset="utf-8">
-<title>Greek mythology quizz</title>
+			<title>Greek mythology quizz</title>
 </head>
 <body>
 <h2>Greek mythology quizz</h2>
@@ -41,13 +41,14 @@
 
 		request.onload = function() {
 			var caracters = request.response;
+
 			populateSection(caracters);
 		}
 		function populateSection(jsonObj) {
 			var questions = 0;
 			var randomCaracter = randomNumFunc(jsonObj['caracters'].length);
 			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
-			var randomRelation = caracter[randomNumFunc(caracter.length)];
+			let randomRelation = caracter[randomNumFunc(caracter.length)];
 
 			if(randomRelation === "name") {
 				while(randomRelation === "name") {
@@ -61,7 +62,6 @@
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
-				console.log(randomRelation)
 				// creates a function to get the summary of the wikipedia page corresponding to the answer.
 				function wikipedia() {
 							// defines a variable for refering to the URL of the JSON file of the wikipedia page.
