@@ -1,16 +1,16 @@
 {
 	"caracters" : [
 		{
-			"name": ["Ulysses"],
+			"name": ["Odysseus"],
 			"spouse": ["Penelope"],
 			"son": ["Telemachus", "Telegonus"],
-			"father": ["Laertes"],
-			"mother": ["Anticlea"]
+			"father": ["Laertes", "Laërtes"],
+			"mother": ["Anticlea", "Anticlia"]
 		},
 		{
 			"name": ["Penelope"],
 			"spouse": ["Odysseus", "Ulysses"],
-			"son": ["Telemachus", "Telegonus"],
+			"son": ["Telemachus"],
 			"father": ["Icarios"]
 		},
 		{
@@ -18,16 +18,22 @@
 			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Penelope"],
 			"brother": ["Telegonus"],
-			"grandmother": ["Anticlea"],
-			"grandfather": ["Laertes"]
+			"grandmother": ["Anticlea", "Anticlia"],
+			"grandfather": ["Laertes", "Laërtes"]
 		},
+		{
+			"name": ["Helen"],
+			"wikipage": ["Helen_of_Troy"]
+		},
+
 		{
 			"name": ["Telegonus"],
 			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Circe"],
 			"brother": ["Telemachus"],
-			"grandmother": ["Anticlea"],
-			"grandfather": ["Laertes", "Helios"]
+			"grandmother": ["Anticlea", "Anticlia"],
+			"grandfather": ["Laertes", "Laërtes", "Helios"],
+			"wikipage": ["Telegonus_(son_of_Odysseus)"]
 		}
 	]
 }

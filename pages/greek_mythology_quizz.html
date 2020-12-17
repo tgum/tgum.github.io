@@ -51,7 +51,7 @@
 
 			if(randomRelation === "name") {
 				while(randomRelation === "name") {
-					var randomRelation = caracter[randomNumFunc(caracter.length)];
+					randomRelation = caracter[randomNumFunc(caracter.length)];
 
 				}
 			}
@@ -75,7 +75,7 @@
     					request.send();
 							// changes the href of the link with the id wikipedia_link to a link about the caracter and the content to "learn more on wikipedia"
 							var link = document.getElementById('wikipedia_link');
-							link.textContent = "Learn more about " + answer + " on wikipedia";
+							link.textContent = "Learn more about " + answer + " on Wikipedia";
 							link.href = "https://en.wikipedia.org/wiki/" + answer;
 							/* then the response is recieved change the content of the element with the id "para"
 							to the extract of the wikipedia page coresponding to the answer */
