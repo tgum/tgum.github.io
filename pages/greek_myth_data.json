@@ -1,17 +1,19 @@
 {
-	"caracters" : [
+	"characters" : [
 		{
 			"name": ["Odysseus"],
 			"spouse": ["Penelope"],
 			"son": ["Telemachus", "Telegonus"],
 			"father": ["Laertes", "Laërtes"],
 			"mother": ["Anticlea", "Anticlia"]
+			"wikipage": ["Odysseus"]
 		},
 		{
 			"name": ["Penelope"],
 			"spouse": ["Odysseus", "Ulysses"],
 			"son": ["Telemachus"],
 			"father": ["Icarios"]
+			"wikipage": ["Icarius_(Spartan)"]
 		},
 		{
 			"name": ["Telemachus"],
@@ -20,12 +22,12 @@
 			"brother": ["Telegonus"],
 			"grandmother": ["Anticlea", "Anticlia"],
 			"grandfather": ["Laertes", "Laërtes"]
+			"wikipage": ["Telemachus"]
 		},
 		{
 			"name": ["Helen"],
 			"wikipage": ["Helen_of_Troy"]
 		},
-
 		{
 			"name": ["Telegonus"],
 			"father": ["Odysseus", "Ulysses"],
