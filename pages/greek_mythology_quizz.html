@@ -36,33 +36,33 @@
 
 		async function startAll() {
 			let response = await fetch(dataURL);
-			let caracters = await response.json();
-			populateSection(caracters);
+			let characters = await response.json();
+			populateSection(characters);
 		}
 		startAll();
 
 		function populateSection(jsonObj) {
 			var questions = 0;
-			var randomCaracter = randomNumFunc(jsonObj.caracters.length);
-			caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter])
-			let randomRelation = caracter[randomNumFunc(caracter.length)];
+			var randomcharacter = randomNumFunc(jsonObj.characters.length);
+			character = Object.getOwnPropertyNames(jsonObj['characters'][randomcharacter])
+			let randomRelation = character[randomNumFunc(character.length)];
 
 			if(randomRelation === "name" || randomRelation === "wikipage") {
 				while(randomRelation === "name" || randomRelation === "wikipage") {
-					randomRelation = caracter[randomNumFunc(caracter.length)];
+					randomRelation = character[randomNumFunc(character.length)];
 				}
 			}
 
-			var answer = jsonObj['caracters'][randomCaracter][randomRelation];
+			var answer = jsonObj['characters'][randomcharacter][randomRelation];
 			var myPara = document.createElement('p');
-			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + "?";
 			section.appendChild(myPara);
 			function myFunc() {
 				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
 				async function wikipedia() {
-					for (let i = 0; i < jsonObj.caracters.length; i++) {
-						if (jsonObj.caracters[i].name == answer[0]) {
-							var wikipage = jsonObj.caracters[i].wikipage;
+					for (let i = 0; i < jsonObj.characters.length; i++) {
+						if (jsonObj.characters[i].name == answer[0]) {
+							var wikipage = jsonObj.characters[i].wikipage;
 						}
 					}
 					if (wikipage === undefined) {
@@ -95,7 +95,7 @@
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
@@ -109,20 +109,20 @@
 				document.getElementById("textInput").focus();
 
 				if(questions < numberOfQues){
-					randomCaracter = randomNumFunc(jsonObj.caracters.length);
-					caracter = Object.getOwnPropertyNames(jsonObj['caracters'][randomCaracter]);
-					randomRelation = caracter[randomNumFunc(caracter.length)];
+					randomcharacter = randomNumFunc(jsonObj.characters.length);
+					character = Object.getOwnPropertyNames(jsonObj['characters'][randomcharacter]);
+					randomRelation = character[randomNumFunc(character.length)];
 					if(randomRelation === "name" || randomRelation === "wikipage") {
 						while(randomRelation === "name" || randomRelation === "wikipage") {
-							var randomRelation = caracter[randomNumFunc(caracter.length)];
+							var randomRelation = character[randomNumFunc(character.length)];
 						}
 					}
 
-					answer = jsonObj['caracters'][randomCaracter][randomRelation];
+					answer = jsonObj['characters'][randomcharacter][randomRelation];
 
 					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
-					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
+					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + "?";
 				}
 				else {
 					oldPara = document.querySelector('p');
