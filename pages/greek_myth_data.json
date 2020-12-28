@@ -3,7 +3,7 @@
 		{
 			"name": ["Aethra"],
 			"son": ["Theseus"],
-			"wikipage": "Aethra"
+			"wikipage": "Aethra_(mother_of_Theseus)"
 		},
 		{
 			"name": ["Agamemnon"],
@@ -28,7 +28,7 @@
 		{
 			"name": ["Anticlea"],
 			"father": ["Autolycus"],
-			"son": ["Ulysses"],
+			"son": ["Odysseus", "Ulysses"],
 			"spouse": ["Laertes"],
 			"paternal grandfather": ["Hermes"],
 			"paternal grandmother": ["Chione"],
@@ -49,8 +49,7 @@
 		},
 		{
 			"name": ["Athens"],
-			"king": ["Aegeus"],
-			"wikipage": "Athens"
+			"king": ["Aegeus"]
 		},
 		{
 			"name": ["Autolycus"],
@@ -59,7 +58,7 @@
 			"daughter": ["Anticlea"],
 			"paternal grandfather": ["Zeus"],
 			"paternal grandmother": ["Maia"],
-			"grandson": ["Ulysses"],
+			"grandson": ["Odysseus", "Ulysses"],
 			"wikipage": "Autolycus"
 		},
 		{
@@ -99,7 +98,7 @@
 		},
 		{
 			"name": ["Gaia"],
-			"son": ["Cronus"],
+			"son": ["Cronus", "Cronos"],
 			"daughter": ["Rhea"],
 			"grandson": ["Zeus"],
 			"wikipage": "Gaia"
@@ -129,7 +128,7 @@
 			"father": ["Zeus"],
 			"mother": ["Alcmene"],
 			"spouse": ["Megara"],
-			"paternal grandfather": ["Cronus"],
+			"paternal grandfather": ["Cronus", "Cronos"],
 			"paternal grandmother": ["Rhea"],
 			"cousin": ["Theseus"],
 			"brother": ["Iphicles"],
@@ -141,7 +140,7 @@
 			"mother": ["Maia"],
 			"son": ["Autolycus"],
 			"spouse": ["Chione"],
-			"paternal grandfather": ["Cronus"],
+			"paternal grandfather": ["Cronus", "Cronos"],
 			"paternal grandmother": ["Rhea"],
 			"wikipage": "Hermes"
 		},
@@ -158,7 +157,7 @@
 			"daughter": ["Penelope"],
 			"grandson": ["Telemachus"],
 			"brother": ["Tyndareus"],
-			"wikipage": "Icarius"
+			"wikipage": "Icarius_(Spartan)"
 		},
 		{
 			"name": ["Iolaus"],
@@ -174,9 +173,8 @@
 			"wikipage": "Iphicles"
 		},
 		{
-			"name": ["Ithaque"],
-			"king": ["Ulysses"],
-			"wikipage": ""
+			"name": ["Ithaca"],
+			"king": ["Odysseus", "Ulysses"]
 		},
 		{
 			"name": ["Jocasta"],
@@ -186,7 +184,7 @@
 		},
 		{
 			"name": ["Laertes"],
-			"son": ["Ulysses"],
+			"son": ["Odysseus", "Ulysses"],
 			"spouse": ["Anticlea"],
 			"grandson": ["Telemachus"],
 			"wikipage": "Laertes"
@@ -206,7 +204,7 @@
 		{
 			"name": ["Megara"],
 			"spouse": ["Heracles"],
-			"wikipage": "Megara"
+			"wikipage": "Megara_(mythology)"
 		},
 		{
 			"name": ["Menelaus"],
@@ -215,9 +213,8 @@
 			"wikipage": "Menelaus"
 		},
 		{
-			"name": ["Mycene"],
-			"king": ["Agamemnon"],
-			"wikipage": "Mycene"
+			"name": ["Mycenae"],
+			"king": ["Agamemnon"]
 		},
 		{
 			"name": ["Oedipus"],
@@ -237,16 +234,16 @@
 		},
 		{
 			"name": ["Uranus"],
-			"son": ["Cronus"],
+			"son": ["Cronus", "Cronos"],
 			"daughter": ["Rhea"],
 			"grandson": ["Zeus"],
-			"wikipage": "Uranus"
+			"wikipage": "Uranus_(mythology)"
 		},
 		{
 			"name": ["Penelope"],
 			"father": ["Icarius"],
 			"son": ["Telemachus"],
-			"spouse": ["Ulysses"],
+			"spouse": ["Odysseus", "Ulysses"],
 			"uncle": ["Tyndareus"],
 			"wikipage": "Penelope"
 		},
@@ -270,19 +267,18 @@
 			"father": ["Uranus"],
 			"mother": ["Gaia"],
 			"son": ["Zeus"],
-			"spouse": ["Cronus"],
+			"spouse": ["Cronus", "Cronos"],
 			"grandson": ["Hermes"],
-			"brother": ["Cronus"],
-			"wikipage": "Rhea"
+			"brother": ["Cronus", "Cronos"],
+			"wikipage": "Rhea_(mythology)"
 		},
 		{
-			"name": ["Sparte"],
-			"king": ["Menelaus"],
-			"wikipage": "Sparte"
+			"name": ["Sparta"],
+			"king": ["Menelaus"]
 		},
 		{
 			"name": ["Telemachus"],
-			"father": ["Ulysses"],
+			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Penelope"],
 			"paternal grandfather": ["Laertes"],
 			"paternal grandmother": ["Anticlea"],
@@ -292,8 +288,7 @@
 		},
 		{
 			"name": ["Thebes"],
-			"king": ["Oedipus"],
-			"wikipage": "Thebes"
+			"king": ["Oedipus", "Laios"]
 		},
 		{
 			"name": ["Theseus"],
@@ -305,8 +300,7 @@
 		},
 		{
 			"name": ["Troy"],
-			"king": ["Priam"],
-			"wikipage": "Troy"
+			"king": ["Priam"]
 		},
 		{
 			"name": ["Tyndareus"],
@@ -315,7 +309,7 @@
 			"wikipage": "Tyndareus"
 		},
 		{
-			"name": ["Ulysses"],
+			"name": ["Odysseus"],
 			"father": ["Laertes"],
 			"mother": ["Anticlea"],
 			"son": ["Telemachus"],
@@ -325,7 +319,7 @@
 		},
 		{
 			"name": ["Zeus"],
-			"father": ["Cronus"],
+			"father": ["Cronus", "Cronos"],
 			"mother": ["Rhea"],
 			"son": ["Hermes"],
 			"spouse": ["Hera"],
