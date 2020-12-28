@@ -1,5 +1,10 @@
 {
 	"characters" : [
+    {
+			"name": ["Aegeus"],
+			"son": ["Theseus"],
+			"wikipage": "Aegeus"
+		},
 		{
 			"name": ["Aethra"],
 			"son": ["Theseus"],
@@ -67,6 +72,11 @@
 			"spouse": ["Hermes"],
 			"wikipage": "Chione"
 		},
+    {
+			"name": ["Circe"],
+			"son": ["Telegonus"],
+			"wikipage": "Circe"
+		},
 		{
 			"name": ["Clytemnestra"],
 			"son": ["Orestes"],
@@ -83,11 +93,6 @@
 			"grandson": ["Hermes"],
 			"sister": ["Rhea"],
 			"wikipage": "Cronus"
-		},
-		{
-			"name": ["Aegeus"],
-			"son": ["Theseus"],
-			"wikipage": "Aegeus"
 		},
 		{
 			"name": ["Electra"],
@@ -238,10 +243,17 @@
 			"daughter": ["Rhea"],
 			"grandson": ["Zeus"],
 			"wikipage": "Uranus_(mythology)"
+    },
+			"name": ["Odysseus"],
+			"spouse": ["Penelope"],
+			"son": ["Telemachus", "Telegonus"],
+			"father": ["Laërtes", "Laertes"],
+			"mother": ["Anticlea", "Anticlia"],
+			"wikipage": "Odysseus"
 		},
 		{
 			"name": ["Penelope"],
-			"father": ["Icarius"],
+      "father": ["Icarius", "Icarios"],
 			"son": ["Telemachus"],
 			"spouse": ["Odysseus", "Ulysses"],
 			"uncle": ["Tyndareus"],
@@ -280,11 +292,20 @@
 			"name": ["Telemachus"],
 			"father": ["Odysseus", "Ulysses"],
 			"mother": ["Penelope"],
-			"paternal grandfather": ["Laertes"],
-			"paternal grandmother": ["Anticlea"],
-			"maternal grandfather": ["Icarius"],
-			"cousin": ["Helen"],
-			"wikipage": "Telemachus"
+      "brother": ["Telegonus"],
+			"paternal grandfather": ["Laërtes", "Laertes"],
+			"paternal grandmother": ["Anticlea", "Anticlia"],
+			"maternal grandfather": ["Icarius", "Icarios"],
+			"wikipage": "Telemachus"  
+		},
+    {
+			"name": ["Telegonus"],
+			"father": ["Odysseus", "Ulysses"],
+			"mother": ["Circe"],
+			"brother": ["Telemachus"],
+			"grandmother": ["Anticlea", "Anticlia"],
+			"grandfather": ["Laërtes", "Laertes", "Helios"],
+			"wikipage": "Telegonus_(son_of_Odysseus)"
 		},
 		{
 			"name": ["Thebes"],
@@ -309,15 +330,6 @@
 			"wikipage": "Tyndareus"
 		},
 		{
-			"name": ["Odysseus"],
-			"father": ["Laertes"],
-			"mother": ["Anticlea"],
-			"son": ["Telemachus"],
-			"spouse": ["Penelope"],
-			"maternal grandfather": ["Autolycus"],
-			"wikipage": "Ulysses"
-		},
-		{
 			"name": ["Zeus"],
 			"father": ["Cronus", "Cronos"],
 			"mother": ["Rhea"],
@@ -329,6 +341,6 @@
 			"maternal grandmother": ["Gaia"],
 			"grandson": ["Autolycus"],
 			"wikipage": "Zeus"
-		}
+    }
 	]
 }
