@@ -1,347 +1,365 @@
 {
-	"characters" : [
-    {
-			"name": ["Aegeus"],
-			"son": ["Theseus"],
-			"wikipage": "Aegeus"
-		},
-		{
-			"name": ["Aethra"],
-			"son": ["Theseus"],
-			"wikipage": "Aethra_(mother_of_Theseus)"
-		},
-		{
-			"name": ["Agamemnon"],
-			"son": ["Orestes"],
-			"daughter": ["Electra"],
-			"spouse": ["Clytemnestra"],
-			"brother": ["Menelaus"],
-			"wikipage": "Agamemnon"
-		},
-		{
-			"name": ["Alcmene"],
-			"son": ["Heracles"],
-			"spouse": ["Amphitryon"],
-			"wikipage": "Alcmene"
-		},
-		{
-			"name": ["Amphitryon"],
-			"son": ["Iphicles"],
-			"spouse": ["Alcmene"],
-			"wikipage": "Amphitryon"
-		},
-		{
-			"name": ["Anticlea"],
-			"father": ["Autolycus"],
-			"son": ["Odysseus", "Ulysses"],
-			"spouse": ["Laertes"],
-			"paternal grandfather": ["Hermes"],
-			"paternal grandmother": ["Chione"],
-			"grandson": ["Telemachus"],
-			"wikipage": "Anticlea"
-		},
-		{
-			"name": ["Antigone"],
-			"father": ["Oedipus"],
-			"mother": ["Jocasta"],
-			"brother": ["Polynices"],
-			"wikipage": "Antigone"
-		},
-		{
-			"name": ["Antiope"],
-			"spouse": ["Theseus"],
-			"wikipage": "Antiope"
-		},
-		{
-			"name": ["Athens"],
-			"king": ["Aegeus"]
-		},
-		{
-			"name": ["Autolycus"],
-			"father": ["Hermes"],
-			"mother": ["Chione"],
-			"daughter": ["Anticlea"],
-			"paternal grandfather": ["Zeus"],
-			"paternal grandmother": ["Maia"],
-			"grandson": ["Odysseus", "Ulysses"],
-			"wikipage": "Autolycus"
-		},
-		{
-			"name": ["Chione"],
-			"son": ["Autolycus"],
-			"spouse": ["Hermes"],
-			"wikipage": "Chione"
-		},
-    {
-			"name": ["Circe"],
-			"son": ["Telegonus"],
-			"wikipage": "Circe"
-		},
-		{
-			"name": ["Clytemnestra"],
-			"son": ["Orestes"],
-			"daughter": ["Electra"],
-			"spouse": ["Agamemnon"],
-			"wikipage": "Clytemnestra"
-		},
-		{
-			"name": ["Cronus"],
-			"father": ["Uranus"],
-			"mother": ["Gaia"],
-			"son": ["Zeus"],
-			"spouse": ["Rhea"],
-			"grandson": ["Hermes"],
-			"sister": ["Rhea"],
-			"wikipage": "Cronus"
-		},
-		{
-			"name": ["Electra"],
-			"father": ["Agamemnon"],
-			"mother": ["Clytemnestra"],
-			"brother": ["Orestes"],
-			"wikipage": "Electra"
-		},
-		{
-			"name": ["Gaia"],
-			"son": ["Cronus", "Cronos"],
-			"daughter": ["Rhea"],
-			"grandson": ["Zeus"],
-			"wikipage": "Gaia"
-		},
-		{
-			"name": ["Hector"],
-			"father": ["Priam"],
-			"mother": ["Hecuba"],
-			"wikipage": "Hector"
-		},
-		{
-			"name": ["Hecuba"],
-			"son": ["Hector"],
-			"spouse": ["Priam"],
-			"wikipage": "Hecuba"
-		},
-		{
-			"name": ["Helen"],
-			"father": ["Tyndareus"],
-			"spouse": ["Menelaus"],
-			"cousin": ["Penelope"],
-			"uncle": ["Icarius"],
-			"wikipage": "Helen_of_Troy"
-		},
-		{
-			"name": ["Heracles"],
-			"father": ["Zeus"],
-			"mother": ["Alcmene"],
-			"spouse": ["Megara"],
-			"paternal grandfather": ["Cronus", "Cronos"],
-			"paternal grandmother": ["Rhea"],
-			"cousin": ["Theseus"],
-			"brother": ["Iphicles"],
-			"wikipage": "Heracles"
-		},
-		{
-			"name": ["Hermes"],
-			"father": ["Zeus"],
-			"mother": ["Maia"],
-			"son": ["Autolycus"],
-			"spouse": ["Chione"],
-			"paternal grandfather": ["Cronus", "Cronos"],
-			"paternal grandmother": ["Rhea"],
-			"wikipage": "Hermes"
-		},
-		{
-			"name": ["Hippolytus"],
-			"father": ["Theseus"],
-			"mother": ["Antiope"],
-			"paternal grandfather": ["Aegeus"],
-			"paternal grandmother": ["Aethra"],
-			"wikipage": "Hippolytus"
-		},
-		{
-			"name": ["Icarius"],
-			"daughter": ["Penelope"],
-			"grandson": ["Telemachus"],
-			"brother": ["Tyndareus"],
-			"wikipage": "Icarius_(Spartan)"
-		},
-		{
-			"name": ["Iolaus"],
-			"father": ["Iphicles"],
-			"paternal grandfather": ["Amphitryon"],
-			"paternal grandmother": ["Alcmene"],
-			"wikipage": "Iolaus"
-		},
-		{
-			"name": ["Iphicles"],
-			"mother": ["Alcmene"],
-			"brother": ["Heracles"],
-			"wikipage": "Iphicles"
-		},
-		{
-			"name": ["Ithaca"],
-			"king": ["Odysseus", "Ulysses"]
-		},
-		{
-			"name": ["Jocasta"],
-			"son": ["Oedipus"],
-			"spouse": ["Laius"],
-			"wikipage": "Jocasta"
-		},
-		{
-			"name": ["Laertes"],
-			"son": ["Odysseus", "Ulysses"],
-			"spouse": ["Anticlea"],
-			"grandson": ["Telemachus"],
-			"wikipage": "Laertes"
-		},
-		{
-			"name": ["Laius"],
-			"son": ["Oedipus"],
-			"spouse": ["Jocasta"],
-			"wikipage": "Laius"
-		},
-		{
-			"name": ["Maia"],
-			"son": ["Hermes"],
-			"grandson": ["Autolycus"],
-			"wikipage": "Maia"
-		},
-		{
-			"name": ["Megara"],
-			"spouse": ["Heracles"],
-			"wikipage": "Megara_(mythology)"
-		},
-		{
-			"name": ["Menelaus"],
-			"spouse": ["Helen"],
-			"brother": ["Agamemnon"],
-			"wikipage": "Menelaus"
-		},
-		{
-			"name": ["Mycenae"],
-			"king": ["Agamemnon"]
-		},
-		{
-			"name": ["Oedipus"],
-			"father": ["Laius"],
-			"mother": ["Jocasta"],
-			"son": ["Polynices"],
-			"daughter": ["Antigone"],
-			"spouse": ["Jocasta"],
-			"wikipage": "Oedipus"
-		},
-		{
-			"name": ["Orestes"],
-			"father": ["Agamemnon"],
-			"mother": ["Clytemnestra"],
-			"sister": ["Electra"],
-			"wikipage": "Orestes"
-		},
-		{
-			"name": ["Uranus"],
-			"son": ["Cronus", "Cronos"],
-			"daughter": ["Rhea"],
-			"grandson": ["Zeus"],
-			"wikipage": "Uranus_(mythology)"
-    },
-		{
-			"name": ["Odysseus"],
-			"spouse": ["Penelope"],
-			"son": ["Telemachus", "Telegonus"],
-			"father": ["Laërtes", "Laertes"],
-			"mother": ["Anticlea", "Anticlia"],
-			"wikipage": "Odysseus"
-		},
-		{
-			"name": ["Penelope"],
-      "father": ["Icarius", "Icarios"],
-			"son": ["Telemachus"],
-			"spouse": ["Odysseus", "Ulysses"],
-			"uncle": ["Tyndareus"],
-			"wikipage": "Penelope"
-		},
-		{
-			"name": ["Polynices"],
-			"father": ["Oedipus"],
-			"mother": ["Jocasta"],
-			"paternal grandfather": ["Laius"],
-			"paternal grandmother": ["Jocasta"],
-			"sister": ["Antigone"],
-			"wikipage": "Polynices"
-		},
-		{
-			"name": ["Priam"],
-			"son": ["Hector"],
-			"spouse": ["Hecuba"],
-			"wikipage": "Priam"
-		},
-		{
-			"name": ["Rhea"],
-			"father": ["Uranus"],
-			"mother": ["Gaia"],
-			"son": ["Zeus"],
-			"spouse": ["Cronus", "Cronos"],
-			"grandson": ["Hermes"],
-			"brother": ["Cronus", "Cronos"],
-			"wikipage": "Rhea_(mythology)"
-		},
-		{
-			"name": ["Sparta"],
-			"king": ["Menelaus"]
-		},
-		{
-			"name": ["Telemachus"],
-			"father": ["Odysseus", "Ulysses"],
-			"mother": ["Penelope"],
-      "brother": ["Telegonus"],
-			"paternal grandfather": ["Laërtes", "Laertes"],
-			"paternal grandmother": ["Anticlea", "Anticlia"],
-			"maternal grandfather": ["Icarius", "Icarios"],
-			"wikipage": "Telemachus"
-		},
-    {
-			"name": ["Telegonus"],
-			"father": ["Odysseus", "Ulysses"],
-			"mother": ["Circe"],
-			"brother": ["Telemachus"],
-			"grandmother": ["Anticlea", "Anticlia"],
-			"grandfather": ["Laërtes", "Laertes", "Helios"],
-			"wikipage": "Telegonus_(son_of_Odysseus)"
-		},
-		{
-			"name": ["Thebes"],
-			"king": ["Oedipus", "Laios"]
-		},
-		{
-			"name": ["Theseus"],
-			"father": ["Aegeus"],
-			"mother": ["Aethra"],
-			"spouse": ["Antiope"],
-			"cousin": ["Heracles"],
-			"wikipage": "Theseus"
-		},
-		{
-			"name": ["Troy"],
-			"king": ["Priam"]
-		},
-		{
-			"name": ["Tyndareus"],
-			"niece": ["Penelope"],
-			"brother": ["Icarius"],
-			"wikipage": "Tyndareus"
-		},
-		{
-			"name": ["Zeus"],
-			"father": ["Cronus", "Cronos"],
-			"mother": ["Rhea"],
-			"son": ["Hermes"],
-			"spouse": ["Hera"],
-			"paternal grandfather": ["Uranus", "Ouranos"],
-			"paternal grandmother": ["Gaia"],
-			"maternal grandfather": ["Uranus", "Ouranos"],
-			"maternal grandmother": ["Gaia"],
-			"grandson": ["Autolycus"],
-			"wikipage": "Zeus"
-    }
-	]
+  "characters":
+    [
+      {
+        "name": ["Aegeus", "Aegeas"],
+        "spouse": ["Aethra", "Aithra"],
+        "son": ["Theseus"],
+        "wikipage": "Aegeus"
+      },
+      {
+        "name": ["Aethra", "Aithra"],
+        "spouse": ["Aegeus", "Aegeas"],
+        "son": ["Theseus"],
+        "wikipage": "Aethra_(mother_of_Theseus)"
+      },
+      {
+        "name": ["Agamemnon"],
+        "spouse": ["Clytemnestra"],
+        "son": ["Orestes"],
+        "daughter": ["Electra", "Laodice"],
+        "brother": ["Menelaus"],
+        "wikipage": "Agamemnon"
+      },
+      {
+        "name": ["Alcmene", "Alcmena"],
+        "spouse": ["Amphitryon"],
+        "son": ["Heracles", "Alcaeus", "Alcides"],
+        "wikipage": "Alcmene"
+      },
+      {
+        "name": ["Amphitryon"],
+        "spouse": ["Alcmene", "Alcmena"],
+        "son": ["Iphicles", "Iphiclus"],
+        "wikipage": "Amphitryon"
+      },
+      {
+        "name": ["Anticlea", "Anticlia"],
+        "spouse": ["Laertes", "Laërtes"],
+				"son": ["Odysseus", "Ulysses"],
+        "father": ["Autolycus"],
+        "paternal grandfather": ["Hermes"],
+        "paternal grandmother": ["Chione", "Khionê"],
+        "grandson": ["Telemachus"],
+        "wikipage": "Anticlea"
+      },
+      {
+        "name": ["Antigone"],
+        "father": ["Oedipus"],
+        "mother": ["Jocasta", "Iocaste", "Epicaste"],
+        "brother": ["Polynices", "Polyneices"],
+        "wikipage": "Antigone"
+      },
+      {
+        "name": ["Antiope"],
+        "spouse": ["Theseus"],
+        "wikipage": "Antiope_(Amazon)"
+      },
+      {
+        "name": ["Athens"],
+        "king": ["Aegeus", "Aegeas"],
+        "wikipage": "Athens"
+      },
+      {
+        "name": ["Autolycus"],
+        "father": ["Hermes"],
+        "mother": ["Chione", "Khionê"],
+        "daughter": ["Anticlea", "Anticlia"],
+        "paternal grandfather": ["Zeus"],
+        "paternal grandmother": ["Maia"],
+        "wikipage": "Autolycus"
+      },
+      {
+        "name": ["Cassandra", "Kassandra"],
+        "father": ["Priam"],
+        "mother": ["Hecuba"],
+        "brother": ["Hector", "Paris", "Pâris"],
+        "wikipage": "Cassandra"
+      },
+      {
+        "name": ["Chione", "Khionê"],
+        "spouse": ["Hermes"],
+        "son": ["Autolycus"]
+      },
+      {
+        "name": ["Clytemnestra"],
+        "spouse": ["Agamemnon"],
+        "son": ["Orestes"],
+        "daughter": ["Electra", "Laodice"],
+        "sister": ["Helen", "Helena"],
+        "wikipage": "Clytemnestra"
+      },
+      {
+        "name": ["Cronus", "Cronos", "Kronos"],
+        "spouse": ["Rhea", "Rheia"],
+        "father": ["Uranus", "Ouranos"],
+        "mother": ["Gaia", "Gaea"],
+        "son": ["Zeus"],
+        "sister": ["Rhea", "Rheia"],
+        "grandson": ["Hermes"],
+        "wikipage": "Cronus"
+      },
+      {
+        "name": ["Electra", "Laodice"],
+        "father": ["Agamemnon"],
+        "mother": ["Clytemnestra"],
+        "brother": ["Orestes"],
+        "wikipage": "Electra"
+      },
+      {
+        "name": ["Gaia", "Gaea"],
+        "son": ["Cronus", "Cronos", "Kronos"],
+        "daughter": ["Rhea", "Rheia"],
+        "grandson": ["Zeus"],
+        "wikipage": "Gaia"
+      },
+      {
+        "name": ["Hector"],
+        "father": ["Priam"],
+        "mother": ["Hecuba"],
+        "brother": ["Paris", "Pâris"],
+        "sister": ["Cassandra", "Kassandra"],
+        "wikipage": "Hector"
+      },
+      {
+        "name": ["Hecuba"],
+        "spouse": ["Priam"],
+        "son": ["Hector", "Paris", "Pâris"],
+        "wikipage": "Hecuba"
+      },
+      {
+        "name": ["Helen", "Helena"],
+        "spouse": ["Menelaus"],
+        "father": ["Tyndareus"],
+        "cousin": ["Penelope"],
+        "uncle": ["Icarius"],
+        "wikipage": "Helen_of_Troy"
+      },
+      {
+        "name": ["Hera"],
+        "spouse": ["Zeus"],
+        "wikipage": "Hera"
+      },
+      {
+        "name": ["Heracles", "Alcaeus", "Alcides"],
+        "spouse": ["Megara"],
+        "father": ["Zeus"],
+        "mother": ["Alcmene", "Alcmena"],
+        "brother": ["Iphicles", "Iphiclus"],
+        "paternal grandfather": ["Cronus", "Cronos", "Kronos"],
+        "paternal grandmother": ["Rhea", "Rheia"],
+        "cousin": ["Theseus"],
+        "wikipage": "Heracles"
+      },
+      {
+        "name": ["Hermes"],
+        "spouse": ["Chione", "Khionê"],
+        "father": ["Zeus"],
+        "mother": ["Maia"],
+        "son": ["Autolycus"],
+        "paternal grandfather": ["Cronus", "Cronos", "Kronos"],
+        "paternal grandmother": ["Rhea", "Rheia"],
+        "wikipage": "Hermes"
+      },
+      {
+        "name": ["Hippolytus"],
+        "father": ["Theseus"],
+        "mother": ["Antiope"],
+        "paternal grandfather": ["Aegeus", "Aegeas"],
+        "paternal grandmother": ["Aethra", "Aithra"],
+        "wikipage": "Hippolytus"
+      },
+      {
+        "name": ["Icarius"],
+        "daughter": ["Penelope"],
+        "brother": ["Tyndareus"],
+        "grandson": ["Telemachus"],
+        "wikipage": "Icarius_(Spartan)"
+      },
+      {
+        "name": ["Iolaus"],
+        "father": ["Iphicles", "Iphiclus"],
+        "paternal grandfather": ["Amphitryon"],
+        "paternal grandmother": ["Alcmene", "Alcmena"],
+        "wikipage": "Iolaus"
+      },
+      {
+        "name": ["Iphicles", "Iphiclus"],
+        "mother": ["Alcmene", "Alcmena"],
+        "brother": ["Heracles", "Alcaeus", "Alcides"],
+        "wikipage": "Iphicles"
+      },
+      {
+        "name": ["Ithaca"],
+        "king": ["Odysseus", "Ulysses"],
+        "wikipage": "Ithaque"
+      },
+      {
+        "name": ["Jocasta", "Iocaste", "Epicaste"],
+        "spouse": ["Laius", "Laios"],
+        "son": ["Oedipus"],
+        "wikipage": "Jocasta"
+      },
+      {
+        "name": ["Laertes", "Laërtes"],
+        "spouse": ["Anticlea", "Anticlia"],
+				"son": ["Odysseus", "Ulysses"],
+        "grandson": ["Telemachus"],
+        "wikipage": "Laertes"
+      },
+      {
+        "name": ["Laius", "Laios"],
+        "spouse": ["Jocasta", "Iocaste", "Epicaste"],
+        "son": ["Oedipus"],
+        "wikipage": "Laius"
+      },
+      {
+        "name": ["Maia"],
+        "son": ["Hermes"],
+        "grandson": ["Autolycus"],
+        "wikipage": "Maia"
+      },
+      {
+        "name": ["Megara"],
+        "spouse": ["Heracles", "Alcaeus", "Alcides"],
+        "wikipage": "Megara_(mythology)"
+      },
+      {
+        "name": ["Menelaus"],
+        "spouse": ["Helen", "Helena"],
+        "brother": ["Agamemnon"],
+        "wikipage": "Menelaus"
+      },
+      {
+        "name": ["Mycenae"],
+        "king": ["Agamemnon"],
+        "wikipage": "Mycenae"
+      },
+      {
+        "name": ["Odysseus", "Ulysses"],
+        "spouse": ["Penelope"],
+        "father": ["Laertes", "Laërtes"],
+        "mother": ["Anticlea", "Anticlia"],
+        "son": ["Telemachus"],
+        "maternal grandfather": ["Autolycus"],
+        "wikipage": "Odysseus"
+      },
+      {
+        "name": ["Oedipus"],
+        "spouse": ["Jocasta", "Iocaste", "Epicaste"],
+        "father": ["Laius", "Laios"],
+        "mother": ["Jocasta", "Iocaste", "Epicaste"],
+        "son": ["Polynices", "Polyneices"],
+        "daughter": ["Antigone"],
+        "wikipage": "Oedipus"
+      },
+      {
+        "name": ["Orestes"],
+        "father": ["Agamemnon"],
+        "mother": ["Clytemnestra"],
+        "sister": ["Electra", "Laodice"],
+        "wikipage": "Orestes"
+      },
+      {
+        "name": ["Paris", "Pâris"],
+        "father": ["Priam"],
+        "mother": ["Hecuba"],
+        "brother": ["Hector"],
+        "sister": ["Cassandra", "Kassandra"],
+        "wikipage": "Paris_(mythology)"
+      },
+      {
+        "name": ["Penelope"],
+        "spouse": ["Odysseus", "Ulysses"],
+        "father": ["Icarius"],
+        "son": ["Telemachus"],
+        "cousin": ["Helen", "Helena"],
+        "uncle": ["Tyndareus"],
+        "wikipage": "Penelope"
+      },
+      {
+        "name": ["Polynices", "Polyneices"],
+        "father": ["Oedipus"],
+        "mother": ["Jocasta", "Iocaste", "Epicaste"],
+        "sister": ["Antigone"],
+        "paternal grandfather": ["Laius", "Laios"],
+        "paternal grandmother": ["Jocasta", "Iocaste", "Epicaste"],
+        "wikipage": "Polynices"
+      },
+      {
+        "name": ["Priam"],
+        "spouse": ["Hecuba"],
+        "son": ["Hector"],
+        "daughter": ["Cassandra", "Kassandra"],
+        "wikipage": "Priam"
+      },
+      {
+        "name": ["Rhea", "Rheia"],
+        "spouse": ["Cronus", "Cronos", "Kronos"],
+        "father": ["Uranus", "Ouranos"],
+        "mother": ["Gaia", "Gaea"],
+        "son": ["Zeus"],
+        "brother": ["Cronus", "Cronos", "Kronos"],
+        "grandson": ["Hermes"],
+        "wikipage": "Rhea_(mythology)"
+      },
+      {
+        "name": ["Sparta"],
+        "king": ["Menelaus"],
+        "wikipage": "Sparta"
+      },
+      {
+        "name": ["Telemachus"],
+        "father": ["Odysseus", "Ulysses"],
+        "mother": ["Penelope"],
+        "paternal grandfather": ["Laertes", "Laërtes"],
+        "paternal grandmother": ["Anticlea", "Anticlia"],
+        "maternal grandfather": ["Icarius"],
+        "wikipage": "Telemachus"
+      },
+      {
+        "name": ["Thebes"],
+        "king": ["Oedipus"],
+        "wikipage": "Thebes"
+      },
+      {
+        "name": ["Theseus"],
+        "spouse": ["Antiope"],
+        "father": ["Aegeus", "Aegeas"],
+        "mother": ["Aethra", "Aithra"],
+        "cousin": ["Heracles", "Alcaeus", "Alcides"],
+        "wikipage": "Theseus"
+      },
+      {
+        "name": ["Troy"],
+        "king": ["Priam"],
+        "wikipage": "Troy"
+      },
+      {
+        "name": ["Tyndareus"],
+        "brother": ["Icarius"],
+        "niece": ["Penelope"],
+        "wikipage": "Tyndareus"
+      },
+      {
+        "name": ["Uranus", "Ouranos"],
+        "son": ["Cronus", "Cronos", "Kronos"],
+        "daughter": ["Rhea", "Rheia"],
+        "grandson": ["Zeus"],
+        "wikipage": "Uranus_(mythology)"
+      },
+      {
+        "name": ["Zeus"],
+        "spouse": ["Hera"],
+        "father": ["Cronus", "Cronos", "Kronos"],
+        "mother": ["Rhea", "Rheia"],
+        "son": ["Hermes"],
+        "paternal grandfather": ["Uranus", "Ouranos"],
+        "paternal grandmother": ["Gaia", "Gaea"],
+        "maternal grandfather": ["Uranus", "Ouranos"],
+        "maternal grandmother": ["Gaia", "Gaea"],
+        "grandson": ["Autolycus"],
+        "wikipage": "Zeus"
+      }
+    ]
 }
