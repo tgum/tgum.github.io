@@ -61,6 +61,7 @@
 			var myPara = document.createElement('p');
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + "?";
 			section.appendChild(myPara);
+			var cloneRelation = randomRelation;
 			function myFunc() {
 				// creates a function to get the summary of the wikipedia page corresponding to the answer.
 				function wikipedia() {
@@ -94,7 +95,7 @@
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + cloneRelation + " of " + jsonObj['caracters'][randomCaracter].name + " is " + answer + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
