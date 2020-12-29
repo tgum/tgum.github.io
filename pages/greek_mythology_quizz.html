@@ -110,8 +110,8 @@
 					score++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if (questions < numberOfQuestions) {
-					yesOrNo.innerHTML = "The " + cloneOfRandomRelation + " of " +
-						jsonObj.characters[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + cloneOfRandomRelation + " of " + jsonObj.characters[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
