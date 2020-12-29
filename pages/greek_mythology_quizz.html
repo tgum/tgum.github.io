@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
 		<title>Greek mythology quizz</title>
 	</head>
 <body>
@@ -29,23 +31,40 @@
 		var image = document.getElementById("image")
 		var wikipediaPara = document.getElementById("para")
 		var numberOfQues = 20;
+		var characters = null
 
 		function randomNumFunc(maxi) {
 			return Math.floor(Math.random() * maxi);
 		}
 
-		async function startAll() {
-			let response = await fetch(dataURL);
-			let characters = await response.json();
-			populateSection(characters);
+		var firebaseConfig = {
+			apiKey: "AIzaSyBtHi0U_Itn8ahgO31UeuibqB8wQohXZak",
+			authDomain: "data-char.firebaseapp.com",
+			databaseURL: "https://data-char-default-rtdb.firebaseio.com",
+			projectId: "data-char",
+			storageBucket: "data-char.appspot.com",
+			messagingSenderId: "28173089236",
+			appId: "1:28173089236:web:dfa7a2c6911310ff37be41"
+		};
+		firebase.initializeApp(firebaseConfig);
+
+		var database = firebase.database();
+		var ref = database.ref('characters')
+		ref.on('value', gotData, errData)
+
+		function gotData(data) {
+			populateSection(data.val())
 		}
-		startAll();
+
+		function errData(err) {
+			console.error(err)
+		}
 
 		function populateSection(jsonObj) {
 			var questions = 0;
-			var randomcharacter = randomNumFunc(jsonObj.characters.length);
-			character = Object.getOwnPropertyNames(jsonObj['characters'][randomcharacter])
-			let randomRelation = character[randomNumFunc(character.length)];
+			var randomCharacter = randomNumFunc(jsonObj.length);
+			var character = Object.getOwnPropertyNames(jsonObj[randomCharacter])
+			var randomRelation = character[randomNumFunc(character.length)];
 
 			if(randomRelation === "name" || randomRelation === "wikipage") {
 				while(randomRelation === "name" || randomRelation === "wikipage") {
@@ -53,33 +72,33 @@
 				}
 			}
 
-			var answer = jsonObj['characters'][randomcharacter][randomRelation];
+			var answer = jsonObj[randomCharacter][randomRelation];
 			var myPara = document.createElement('p');
-			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + "?";
+			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj[randomCharacter].name[0] + "?";
 			section.appendChild(myPara);
 			function myFunc() {
 				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
 				async function wikipedia() {
-					for (let i = 0; i < jsonObj.characters.length; i++) {
-						if (jsonObj.characters[i].name == answer[0]) {
-							var wikipage = jsonObj.characters[i].wikipage;
+					for (let i = 0; i < jsonObj.length; i++) {
+						if (jsonObj[i].name == answer[0]) {
+							var wikipage = jsonObj[i].wikipage;
 						}
 					}
-					if (wikipage === undefined) {
+					if (wikipage === "") {
 						var wikipage = "greek_mythology";
 					}
 					// changes the url of element with the id "wikipedia_link" to a link to the Wikipedia page
-				  link.href = "https://en.wikipedia.org/wiki/" + wikipage;
+					link.href = "https://en.wikipedia.org/wiki/" + wikipage;
 					link.textContent = "learn more about " + answer[0] + " on Wikipedia";
 					// defines a variable for refering to the URL of the JSON file of the Wikipedia page.
-    			let url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + wikipage;
+				let url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + wikipage;
 					let response = await fetch(url);
 					let json = await response.json();
 					// changes the paragraph with the id "para" to the first paragraph on the Wikipedia page
 					wikipediaPara.innerHTML = json.extract_html;
 					// changes the <img> to the first image from the Wikipedia page
 					image.src = json.thumbnail.source;
-  				}
+				}
 			// calls the function we just created
 			wikipedia()
 				.catch(error => {
@@ -95,7 +114,7 @@
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
@@ -109,8 +128,8 @@
 				document.getElementById("textInput").focus();
 
 				if(questions < numberOfQues){
-					randomcharacter = randomNumFunc(jsonObj.characters.length);
-					character = Object.getOwnPropertyNames(jsonObj['characters'][randomcharacter]);
+					randomCharacter = randomNumFunc(jsonObj.length);
+					character = Object.getOwnPropertyNames(jsonObj[randomCharacter]);
 					randomRelation = character[randomNumFunc(character.length)];
 					if(randomRelation === "name" || randomRelation === "wikipage") {
 						while(randomRelation === "name" || randomRelation === "wikipage") {
@@ -118,11 +137,11 @@
 						}
 					}
 
-					answer = jsonObj['characters'][randomcharacter][randomRelation];
+					answer = jsonObj[randomCharacter][randomRelation];
 
 					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
-					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj['characters'][randomcharacter].name + "?";
+					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj[randomCharacter].name + "?";
 				}
 				else {
 					oldPara = document.querySelector('p');
@@ -134,9 +153,9 @@
 				input = document.getElementById("textInput");
 				input.addEventListener("keyup", function(event) {
 					if (event.keyCode === 13) {
- 						event.preventDefault();
-  					document.getElementById("click").click();
- 					}
+						event.preventDefault();
+					document.getElementById("click").click();
+					}
 				});
 			button.addEventListener("click", myFunc);
 		}
