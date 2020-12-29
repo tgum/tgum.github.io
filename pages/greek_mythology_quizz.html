@@ -10,6 +10,7 @@
 
 	<h2>greek mythology quizz</h2>
 
+ <!-- The question is written here -->
 	<section>
 	</section>
 
@@ -28,16 +29,18 @@
 		var score = 0;
 		var button = document.getElementById("click");
 		var yesOrNo = document.getElementById("yesNo");
+
 		// makes variables that are used by the Wikipedia section
 		var link = document.getElementById("wikipedia_link");
 		var image = document.getElementById("image");
 		var wikipediaPara = document.getElementById("para");
-		var numberOfQues = 20;
+		var numberOfQuestions = 20;
 
 		function randomNumFunc(maxi) {
 			return Math.floor(Math.random() * maxi);
 		}
 
+		// the startAll function is the function where the data is fetched
 		async function startAll() {
 			let response = await fetch(dataURL);
 			let characters = await response.json();
@@ -45,7 +48,9 @@
 		}
 		startAll();
 
+		// this is the function where all the quizz part happens
 		function populateSection(jsonObj) {
+
 			var questions = 0;
 			var randomCharacter = randomNumFunc(jsonObj.characters.length);
 			var character = Object.getOwnPropertyNames(jsonObj.characters[randomCharacter]);
@@ -57,18 +62,22 @@
 				}
 			}
 
+
 			var answer = jsonObj.characters[randomCharacter][randomRelation];
 			var myPara = document.createElement("p");
 			myPara.textContent = "Who is the " + randomRelation +
-				" of " + jsonObj.characters[randomCharacter].name + "?";
+				" of " + jsonObj.characters[randomCharacter].name[0] + "?";
 			section.appendChild(myPara);
+
+			// this var is here to fix an "undefined" issue
 			var cloneOfRandomRelation = randomRelation;
 
+			// this function is invoked when the "submit" button is hit
 			function myFunc() {
 				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
 				async function wikipedia() {
 					for (let i = 0; i < jsonObj.characters.length; i++) {
-						if (jsonObj.characters[i].name == answer[0]) {
+						if (jsonObj.characters[i].name[0] == answer[0]) {
 							var wikipage = jsonObj.characters[i].wikipage;
 						}
 					}
@@ -100,9 +109,9 @@
 				if (caseInsensitiveAnswer.includes(textBox.toLowerCase())) {
 					score++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
-				} else if (questions < numberOfQues) {
+				} else if (questions < numberOfQuestions) {
 					yesOrNo.innerHTML = "The " + cloneOfRandomRelation + " of " +
-						jsonObj.characters[randomCharacter].name + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+						jsonObj.characters[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
@@ -115,7 +124,7 @@
 				document.getElementById("textInput").value = "";
 				document.getElementById("textInput").focus();
 
-				if (questions < numberOfQues) {
+				if (questions < numberOfQuestions) {
 					randomCharacter = randomNumFunc(jsonObj.characters.length);
 					character = Object.getOwnPropertyNames(jsonObj.characters[randomCharacter]);
 					randomRelation = character[randomNumFunc(character.length)];
@@ -130,13 +139,14 @@
 					oldPara = document.querySelector("p");
 					var myPara = document.createElement("p");
 					myPara.textContent = "Who is the " + randomRelation +
-						" of " + jsonObj.characters[randomCharacter].name + "?";
+						" of " + jsonObj.characters[randomCharacter].name[0] + "?";
 				} else {
 					oldPara = document.querySelector("p");
 					var myPara = document.createElement("p");
-					myPara.textContent = "You finished! You did " + score + " on " + numberOfQues;
+					myPara.textContent = "You finished! You did " + score + " on " + numberOfQuestions;
 				}
 				section.replaceChild(myPara, oldPara);
+				cloneOfRandomRelation = randomRelation;
 			}
 			input = document.getElementById("textInput");
 			input.addEventListener("keyup", function(event) {
