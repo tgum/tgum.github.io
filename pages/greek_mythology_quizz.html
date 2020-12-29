@@ -76,7 +76,6 @@
 			var myPara = document.createElement('p');
 			myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj[randomCharacter].name[0] + "?";
 			section.appendChild(myPara);
-			var oldRelation = randomRelation
 			function myFunc() {
 				// creates a function to get the summary of the Wikipedia page corresponding to the answer.
 				async function wikipedia() {
@@ -115,7 +114,7 @@
 					score ++;
 					yesOrNo.innerHTML = "Bravo!<br>Your score is: " + score + "/" + questions;
 				} else if(questions < numberOfQues) {
-					yesOrNo.innerHTML = "The " + oldRelation + " of " + jsonObj[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
+					yesOrNo.innerHTML = "The " + randomRelation + " of " + jsonObj[randomCharacter].name[0] + " is " + answer[0] + ". Try again. <br> Your score is: " + score + "/" + questions;
 				} else {
 					yesOrNo.innerHTML = "";
 					// clears the image
@@ -137,12 +136,12 @@
 							var randomRelation = character[randomNumFunc(character.length)];
 						}
 					}
-					oldRelation = randomRelation
+
 					answer = jsonObj[randomCharacter][randomRelation];
 
 					oldPara = document.querySelector('p');
 					var myPara = document.createElement('p');
-					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj[randomCharacter].name[0] + "?";
+					myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj[randomCharacter].name + "?";
 				}
 				else {
 					oldPara = document.querySelector('p');
