@@ -244,6 +244,7 @@
 			"grandson": ["Zeus"],
 			"wikipage": "Uranus_(mythology)"
     },
+		{
 			"name": ["Odysseus"],
 			"spouse": ["Penelope"],
 			"son": ["Telemachus", "Telegonus"],
@@ -296,7 +297,7 @@
 			"paternal grandfather": ["Laërtes", "Laertes"],
 			"paternal grandmother": ["Anticlea", "Anticlia"],
 			"maternal grandfather": ["Icarius", "Icarios"],
-			"wikipage": "Telemachus"  
+			"wikipage": "Telemachus"
 		},
     {
 			"name": ["Telegonus"],
