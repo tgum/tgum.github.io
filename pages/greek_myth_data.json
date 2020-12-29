@@ -36,6 +36,7 @@
       {
         "name": ["Anticlea", "Anticlia"],
         "spouse": ["Laertes", "Laërtes"],
+				"son": ["Odysseus", "Ulysses"],
         "father": ["Autolycus"],
         "paternal grandfather": ["Hermes"],
         "paternal grandmother": ["Chione", "Khionê"],
@@ -202,6 +203,7 @@
       {
         "name": ["Laertes", "Laërtes"],
         "spouse": ["Anticlea", "Anticlia"],
+				"son": ["Odysseus", "Ulysses"],
         "grandson": ["Telemachus"],
         "wikipage": "Laertes"
       },
