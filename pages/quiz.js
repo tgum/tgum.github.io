@@ -2,7 +2,7 @@ const section = document.querySelector("section");
 var dataURL = "greek_myth_data.json";
 var score = 0;
 var button = document.getElementById("click");
-var yesOrNo = document.getElementById("yesNo");
+var yesOrNo = document.getElementById("greetings");
 
 // makes variables that are used by the Wikipedia section
 var link = document.getElementById("wikipedia_link");
@@ -39,8 +39,7 @@ function populateSection(jsonObj) {
 
   var answer = jsonObj.characters[randomCharacter][randomRelation];
   var myPara = document.createElement("p");
-  myPara.textContent = "Who is the " + randomRelation +
-    " of " + jsonObj.characters[randomCharacter].name[0] + "?";
+  myPara.textContent = "Who is the " + randomRelation + " of " + jsonObj.characters[randomCharacter].name[0] + "?";
   section.appendChild(myPara);
 
   // this var is here to fix an "undefined" issue
