@@ -13,7 +13,7 @@ this is some text
 
 ### bold text
 
-```markdown
+```
 	**this is bold text**
 	__you can also use undescores__
 ```
@@ -25,7 +25,7 @@ __you can also use underscores__
 
 ### italic text
 
-```markdown
+```
 	*this is italic text*
 	_you can use underscores like for bold text_
 ```
@@ -84,7 +84,7 @@ result:
 ### links
 
 ```markdown
-	[an example link](https://exaple.com)
+	[an example link](https://example.com)
 ```
 
 result:
