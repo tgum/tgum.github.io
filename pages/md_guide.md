@@ -159,7 +159,7 @@ you <em>can</em> <strong>also</strong> add HTML in markdown
 		the language, enter the code and put three backsticks at the end
 	```
 
-	[To make a link put the name of the link in curly brackets     
+	[To make a link put the name of the link in square brackets     
 	and then put the URL in parentheses.](https://like.that)
 
 	- to
