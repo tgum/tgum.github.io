@@ -111,7 +111,7 @@ result:
 1. ordered
 1. list
 
-### srikethrough
+### strikethrough
 
 ```markdown
 	~~this text is strikedthrough~~
