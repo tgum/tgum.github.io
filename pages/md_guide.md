@@ -124,12 +124,12 @@ result:
 ### images
 
 ```markdown
-	![a squirrel picture](images/squirrel.jpg)
+	![a squirrel picture](https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg)
 ```
 
 result:
 
-![a squirrel picture](images/squirrel.jpg)
+![a squirrel picture](https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg)
 
 ### HTML
 
