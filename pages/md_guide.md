@@ -179,3 +179,6 @@ you <em>can</em> <strong>also</strong> add HTML in markdown
 
 	and finaly <em>you</em> can embedd <strong>HTML</strong> in Markdown.
 ```
+
+learn more about markdown on [daring fireballs](https://daringfireball.net/projects/markdown/) website     
+or on [commonmark](https://commonmark.org/)
