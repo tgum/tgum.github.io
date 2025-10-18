@@ -1,5 +1,7 @@
 <title>home</title>
 
+# [i have a new website with cool stuff and stuffs!](https://tgum.neocities.org/)
+
 # All of these are programed by me.
 
 1. [tgum’s chatroom](https://tgum.github.io/chatroom)
